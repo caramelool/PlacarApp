@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    android:focusableInTouchMode="true"
+    tools:context="br.com.fiap.placarapp.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_titulo"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tvTitle"
+        android:layout_above="@id/tvDesenvolvido">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_time_casa"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/etTimeCasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome_time"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_time_visitante"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/etTimeVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome_time"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnJogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_jogar"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"
+            android:onClick="comecarJogo"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDesenvolvido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_desenvolvido"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
