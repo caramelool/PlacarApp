@@ -13,65 +13,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <LinearLayout
+        <br.com.fiap.placarapp.PlacarView
+            android:id="@+id/placarCasa"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical">
+            android:layout_weight="1"/>
 
-            <TextView
-                android:id="@+id/tvTimeCasa"
-                tools:text="Time Casa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/tvTimeCasaGol"
-                tools:text="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="60sp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_gol"
-                android:onClick="golCasa"/>
-
-        </LinearLayout>
-
-        <LinearLayout
+        <br.com.fiap.placarapp.PlacarView
+            android:id="@+id/placarVisitante"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tvTimeVisitante"
-                tools:text="Time Visitante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="18sp"/>
-
-            <TextView
-                android:id="@+id/tvTimeVisitanteGol"
-                tools:text="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="60sp"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/label_gol"
-                android:onClick="golVisitante"/>
-
-        </LinearLayout>
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

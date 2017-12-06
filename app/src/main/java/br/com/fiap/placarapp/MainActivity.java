@@ -33,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        Time timeCasa = new Time(etTimeCasa.getText().toString());
+        Time timeVisitante = new Time(etTimeVisitante.getText().toString());
+
         Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(Common.EXTRA_TIME_CASA, etTimeCasa.getText().toString());
-        intent.putExtra(Common.EXTRA_TIME_VISITANTE, etTimeVisitante.getText().toString());
+        intent.putExtra(Common.EXTRA_TIME_CASA, timeCasa);
+        intent.putExtra(Common.EXTRA_TIME_VISITANTE, timeVisitante);
         startActivityForResult(intent, 0);
     }
 
