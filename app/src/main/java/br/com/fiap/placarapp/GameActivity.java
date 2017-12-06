@@ -13,8 +13,8 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        placarCasa = (PlacarView) findViewById(R.id.placarCasa);
-        placarVisitante = (PlacarView) findViewById(R.id.placarVisitante);
+        placarCasa = findViewById(R.id.placarCasa);
+        placarVisitante = findViewById(R.id.placarVisitante);
 
         if (getIntent() != null) {
             Time timeCasa = (Time) getIntent().getSerializableExtra(Common.EXTRA_TIME_CASA);
