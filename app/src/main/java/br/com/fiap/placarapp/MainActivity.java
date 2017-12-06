@@ -1,8 +1,8 @@
 package br.com.fiap.placarapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
         etTimeCasa = findViewById(R.id.etTimeCasa);
         etTimeVisitante = findViewById(R.id.etTimeVisitante);
+
+        if (savedInstanceState != null) {
+            etTimeCasa.setText(savedInstanceState.getString(Extras.EXTRA_TIME_CASA));
+            etTimeVisitante.setText(savedInstanceState.getString(Extras.EXTRA_TIME_VISITANTE));
+        }
     }
 
     public void comecarJogo(View view) {
@@ -49,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
         etTimeVisitante.setText("");
         etTimeCasa.clearFocus();
         etTimeVisitante.clearFocus();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(Extras.EXTRA_TIME_CASA, etTimeCasa.getText().toString());
+        outState.putString(Extras.EXTRA_TIME_VISITANTE, etTimeVisitante.getText().toString());
     }
 
     private boolean isFormValid() {

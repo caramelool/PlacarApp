@@ -1,7 +1,6 @@
 package br.com.fiap.placarapp;
 
 import android.content.Context;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -50,14 +49,6 @@ public class PlacarView extends LinearLayout {
         tvTimeName.setText(time.getName());
         tvTimeGol.setText(String.valueOf(time.getGols()));
         btnGol.setOnClickListener(onGolClickListener);
-    }
-
-    public void setGolClickable(boolean clickable) {
-        btnGol.setClickable(clickable);
-    }
-
-    public void fimJogo() {
-        btnGol.setOnClickListener(null);
     }
 
     private OnClickListener onGolClickListener = new OnClickListener() {
