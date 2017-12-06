@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         Time timeVisitante = new Time(etTimeVisitante.getText().toString());
 
         Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra(Common.EXTRA_TIME_CASA, timeCasa);
-        intent.putExtra(Common.EXTRA_TIME_VISITANTE, timeVisitante);
+        intent.putExtra(Extras.EXTRA_TIME_CASA, timeCasa);
+        intent.putExtra(Extras.EXTRA_TIME_VISITANTE, timeVisitante);
         startActivityForResult(intent, 0);
     }
 
