@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void comecarJogo(View view) {
         if (TextUtils.isEmpty(etTimeCasa.getText().toString().trim())) {
-            showToast("Informe o time da casa");
+            etTimeCasa.requestFocus();
+            showToast(getString(R.string.alert_home_empty));
             return;
         }
 
         if (TextUtils.isEmpty(etTimeVisitante.getText().toString().trim())) {
-            showToast("Informe o time visitante");
+            etTimeVisitante.requestFocus();
+            showToast(getString(R.string.alert_guest_empty));
             return;
         }
 

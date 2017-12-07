@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">PlacarApp</string>
-    <string name="label_titulo">Times</string>
-    <string name="label_desenvolvido">Desenvolvimento por Lucas Caramelo</string>
-    <string name="label_time_casa">Time da Casa</string>
-    <string name="label_time_visitante">Time Visitante</string>
-    <string name="label_jogar">Começar Jogo</string>
-    <string name="hint_nome_time">Digite o nome do time</string>
-    <string name="label_gol">Gol!!!</string>
+    <string name="app_name" translatable="false">PlacarApp</string>
+    <string name="label_titulo">Teams</string>
+    <string name="label_desenvolvido">Developed by Lucas Caramelo</string>
+    <string name="label_time_casa">Home</string>
+    <string name="label_time_visitante">Guest</string>
+    <string name="label_jogar">Play Game</string>
+    <string name="hint_nome_time">"Enter the name of the time "</string>
+    <string name="label_gol">Goal!!!</string>
+    <string name="alert_guest_empty">"Enter the name of the guest time "</string>
+    <string name="alert_home_empty">"Enter the name of the home time "</string>
 </resources>
